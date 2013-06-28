@@ -120,7 +120,7 @@ def extract_colors(
     # get point color count
     if im.mode != 'RGB':
         im = im.convert('RGB')
-    im = autocrop(im, config.WHITE)  # assume white box
+    #im = autocrop(im, config.WHITE)  # assume white box
     im = im.convert(
         'P', palette=Image.ADAPTIVE, colors=n_quantized).convert('RGB')
     data = im.getdata()
@@ -155,8 +155,8 @@ def extract_colors(
 
     # keep any color which meets the minimum saturation
     sat_colors = [c for c in colors if meets_min_saturation(c, min_saturation)]
-    if bg_color and not meets_min_saturation(bg_color, min_saturation):
-        bg_color = None
+    #if bg_color and not meets_min_saturation(bg_color, min_saturation):
+    #    bg_color = None
     if sat_colors:
         colors = sat_colors
     else:

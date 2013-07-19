@@ -3,7 +3,7 @@ __version_info__ = {
     'major': 0,
     'minor': 2,
     'micro': 2,
-    'releaselevel': 'final',
+    'releaselevel': 'fork',
 }
 
 
